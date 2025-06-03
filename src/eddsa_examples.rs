@@ -52,7 +52,7 @@ mod test {
     #[test]
     fn test_sign_and_verify() {
         let (priv_b64, pub_b64) = generate_keypair();
-        let msg = b"hello chainlink";
+        let msg = b"hello";
         let sig = sign_message(&priv_b64, msg);
         let verified = verify_message(&pub_b64, msg, &sig);
         assert!(verified);
